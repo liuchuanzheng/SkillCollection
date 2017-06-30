@@ -21,6 +21,7 @@ public class MainActivity extends LCZBaseActivity {
     @BindView(R.id.rcv)
     RecyclerView recyclerView;
     private MyAdapter mAdapter;//recyclerview的适配器
+    private String[] strings = {"logger","1","2","3","4","5"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +58,6 @@ public class MainActivity extends LCZBaseActivity {
             case 0:
                 //logger库测试
                 LoggerTestActivity.startAction(((Activity) baseContext));
-                finish();
                 break;
             case 1:
                 break;
@@ -88,7 +88,7 @@ public class MainActivity extends LCZBaseActivity {
 
         @Override
         public void onBindViewHolder(final MyViewHolder holder, int position) {
-            holder.tv.setText(position + "");
+            holder.tv.setText(strings[position]);
             if (onClickListener != null) {
                 holder.tv.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -108,7 +108,7 @@ public class MainActivity extends LCZBaseActivity {
 
         @Override
         public int getItemCount() {
-            return 20;
+            return strings.length;
         }
 
         class MyViewHolder extends RecyclerView.ViewHolder {

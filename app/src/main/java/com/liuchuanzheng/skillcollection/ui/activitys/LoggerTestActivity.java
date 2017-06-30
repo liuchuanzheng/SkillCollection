@@ -4,9 +4,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.liuchuanzheng.skillcollection.R;
 import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by 刘传政 on 2017/6/30 0030.
@@ -17,19 +23,33 @@ import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
  */
 
 public class LoggerTestActivity extends LCZBaseActivity {
+
+
+    @BindView(R.id.ib_right)
+    ImageButton ibRight;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logger);
+        ButterKnife.bind(this);
     }
+
+
     /**
      * 入口
+     *
      * @param activity
      */
-    public static void startAction(Activity activity){
+    public static void startAction(Activity activity) {
         Intent intent = new Intent(activity, LoggerTestActivity.class);
         activity.startActivity(intent);
         activity.overridePendingTransition(R.anim.fade_in,
                 R.anim.fade_out);
+    }
+
+    @OnClick(R.id.ib_right)
+    public void onViewClicked() {
+        Toast.makeText(baseContext, "123", Toast.LENGTH_SHORT).show();
     }
 }
