@@ -63,6 +63,7 @@ public class MainActivity extends LCZBaseActivity {
                 break;
             case 2:
                 break;
+
         }
     }
 
