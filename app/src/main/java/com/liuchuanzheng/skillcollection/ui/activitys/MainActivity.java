@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.liuchuanzheng.skillcollection.R;
 import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
@@ -38,7 +37,7 @@ public class MainActivity extends LCZBaseActivity {
         mAdapter.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(int position) {
-                Toast.makeText(baseContext,position+"",Toast.LENGTH_SHORT).show();
+                switchAndStartActivity(position);
             }
 
             @Override
@@ -48,6 +47,26 @@ public class MainActivity extends LCZBaseActivity {
         });
 
     }
+
+    /**
+     * 打开每个知识点对应的activity
+     * @param position
+     */
+    private void switchAndStartActivity(int position) {
+        switch (position){
+            case 0:
+                //logger库测试
+                LoggerTestActivity.startAction(((Activity) baseContext));
+                finish();
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+        }
+    }
+
+
     public interface OnClickListener{
         void onClick(int position);
         void onLongClick(int position);
