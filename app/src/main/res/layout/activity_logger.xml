@@ -34,11 +34,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="地址https://github.com/JakeWharton/butterknife\n
-引入
-compile 'com.jakewharton:butterknife:8.6.0'
-annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
-      "
+            android:text="著名的logger库\n 引入compile 'com.orhanobut:logger:2.1.1'"
             />
     </ScrollView>
 </RelativeLayout>

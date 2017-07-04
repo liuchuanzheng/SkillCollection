@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.liuchuanzheng.skillcollection.R;
 import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
@@ -50,6 +49,6 @@ public class LoggerTestActivity extends LCZBaseActivity {
 
     @OnClick(R.id.ib_right)
     public void onViewClicked() {
-        Toast.makeText(baseContext, "123", Toast.LENGTH_SHORT).show();
+       RealTestLoggerActivity.startAction(((Activity) baseContext));
     }
 }

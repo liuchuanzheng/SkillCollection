@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".ui.activitys.MainActivity"/>
         <activity android:name=".ui.activitys.LoggerTestActivity"/>
+        <activity android:name=".ui.activitys.RealTestLoggerActivity"/>
     </application>
 
 </manifest>
