@@ -14,11 +14,51 @@
         app:srcCompat="@mipmap/logo" />
 
     <Button
-        android:id="@+id/start"
+        android:id="@+id/set"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
-        android:text="start" />
+        android:text="set" />
+
+    <Button
+        android:id="@+id/alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/set"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="34dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="alpha" />
+
+    <Button
+        android:id="@+id/scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/alpha"
+        android:layout_alignBottom="@+id/alpha"
+        android:layout_alignLeft="@+id/set"
+        android:layout_alignStart="@+id/set"
+        android:text="scale" />
+
+    <Button
+        android:id="@+id/translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/scale"
+        android:layout_toEndOf="@+id/iv"
+        android:layout_toRightOf="@+id/iv"
+        android:text="translate" />
+
+    <Button
+        android:id="@+id/rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/alpha"
+        android:layout_alignStart="@+id/alpha"
+        android:layout_below="@+id/alpha"
+        android:text="rotate" />
 </RelativeLayout>
