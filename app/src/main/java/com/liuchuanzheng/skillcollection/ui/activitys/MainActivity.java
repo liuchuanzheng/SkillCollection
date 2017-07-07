@@ -21,7 +21,7 @@ public class MainActivity extends LCZBaseActivity {
     @BindView(R.id.rcv)
     RecyclerView recyclerView;
     private MyAdapter mAdapter;//recyclerview的适配器
-    private String[] strings = {"logger","1","2","3","4","5"};
+    private String[] strings = {"logger","基本动画","2","3","4","5"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +60,8 @@ public class MainActivity extends LCZBaseActivity {
                 LoggerTestActivity.startAction(((Activity) baseContext));
                 break;
             case 1:
+                //测试官方的基本动画
+                AnimationTestActivity.startAction(((Activity) baseContext));
                 break;
             case 2:
                 break;

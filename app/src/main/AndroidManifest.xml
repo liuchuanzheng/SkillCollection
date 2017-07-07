@@ -20,6 +20,7 @@
         <activity android:name=".ui.activitys.MainActivity"/>
         <activity android:name=".ui.activitys.LoggerTestActivity"/>
         <activity android:name=".ui.activitys.RealTestLoggerActivity"/>
+        <activity android:name=".ui.activitys.AnimationTestActivity"/>
     </application>
 
 </manifest>
