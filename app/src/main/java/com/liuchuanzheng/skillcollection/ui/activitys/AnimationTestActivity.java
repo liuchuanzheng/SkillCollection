@@ -56,6 +56,17 @@ public class AnimationTestActivity extends LCZBaseActivity {
         mAdapter.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(int position) {
+                switch (position){
+                    case 0:
+                        RealTestAnimation0Activity.startAction((Activity) baseContext);
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                }
             }
 
             @Override

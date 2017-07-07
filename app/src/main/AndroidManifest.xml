@@ -21,6 +21,7 @@
         <activity android:name=".ui.activitys.LoggerTestActivity"/>
         <activity android:name=".ui.activitys.RealTestLoggerActivity"/>
         <activity android:name=".ui.activitys.AnimationTestActivity"/>
+        <activity android:name=".ui.activitys.RealTestAnimation0Activity"/>
     </application>
 
 </manifest>
