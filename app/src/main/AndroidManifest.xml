@@ -22,6 +22,8 @@
         <activity android:name=".ui.activitys.RealTestLoggerActivity"/>
         <activity android:name=".ui.activitys.AnimationTestActivity"/>
         <activity android:name=".ui.activitys.RealTestAnimation0Activity"/>
+        <activity android:name=".ui.activitys.SwipeRefreshLayoutTestActivity"/>
+        <activity android:name=".ui.activitys.RealTestSwipeRefreshLayoutActivity"/>
     </application>
 
 </manifest>

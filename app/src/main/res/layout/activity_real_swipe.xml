@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--使用谷歌官方的下拉刷新组件,只有下拉刷新功能 -->
+      <android.support.v4.widget.SwipeRefreshLayout
+          android:id="@+id/srl"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <android.support.v7.widget.RecyclerView
+              android:id="@+id/rcv"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_below="@id/base_bar">
+
+          </android.support.v7.widget.RecyclerView>
+
+      </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>
