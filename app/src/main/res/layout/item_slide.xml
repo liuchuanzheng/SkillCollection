@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/itemcolor"
+    >
+    <cn.yan.library.SlideLayout
+        android:id="@+id/sl_rcv"
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:slideDirection="fromRight">
+
+        <TextView
+            android:id="@+id/tv_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="item" />
+        <TextView
+            android:id="@+id/tv_right"
+            android:background="@android:color/holo_red_light"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="我是左拉出来的菜单"/>
+    </cn.yan.library.SlideLayout>
+
+</LinearLayout>
