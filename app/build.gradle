@@ -32,4 +32,7 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.1.0'
     compile 'com.orhanobut:logger:2.1.1'
     compile project(':SlideLayout_library')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.2'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.2'//如果使用了特殊的Header
 }

@@ -26,6 +26,8 @@
         <activity android:name=".ui.activitys.RealTestSwipeRefreshLayoutActivity"/>
         <activity android:name=".ui.activitys.SlideLayoutTestActivity"/>
         <activity android:name=".ui.activitys.RealTestSlideLayoutActivity"/>
+        <activity android:name=".ui.activitys.SmartRefreshLayoutTestActivity"/>
+        <activity android:name=".ui.activitys.RealTestSmartRefreshLayoutActivity"/>
     </application>
 
 </manifest>
