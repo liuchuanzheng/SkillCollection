@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.liuchuanzheng.skillcollection.R;
 import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
 import com.liuchuanzheng.skillcollection.ui.activitys.real_2.real_2_2.CoordinatorActivity_2_2;
+import com.liuchuanzheng.skillcollection.ui.activitys.real_2.real_2_2.CoordinatorActivity_2_2_AppBar;
 
 import java.util.ArrayList;
 
@@ -132,7 +133,7 @@ public class RealTestCoordinatorLayoutActivity extends LCZBaseActivity {
                 if(position == 0){
                     CoordinatorActivity_2_2.startAction((Activity) baseContext);
                 }else if (position == 1){
-
+                    CoordinatorActivity_2_2_AppBar.startAction((Activity) baseContext);
                 }
             }
 

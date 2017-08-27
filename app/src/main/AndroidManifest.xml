@@ -31,6 +31,7 @@
         <activity android:name=".ui.activitys.real_2.RealTestSmartRefreshLayoutActivity"/>
         <activity android:name=".ui.activitys.real_2.RealTestSwipeRefreshLayoutActivity"/>
         <activity android:name=".ui.activitys.real_2.real_2_2.CoordinatorActivity_2_2"/>
+        <activity android:name=".ui.activitys.real_2.real_2_2.CoordinatorActivity_2_2_AppBar"/>
 
     </application>
 
