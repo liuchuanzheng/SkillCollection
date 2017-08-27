@@ -18,16 +18,20 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activitys.MainActivity"/>
-        <activity android:name=".ui.activitys.LoggerTestActivity"/>
-        <activity android:name=".ui.activitys.RealTestLoggerActivity"/>
-        <activity android:name=".ui.activitys.AnimationTestActivity"/>
-        <activity android:name=".ui.activitys.RealTestAnimation0Activity"/>
-        <activity android:name=".ui.activitys.SwipeRefreshLayoutTestActivity"/>
-        <activity android:name=".ui.activitys.RealTestSwipeRefreshLayoutActivity"/>
-        <activity android:name=".ui.activitys.SlideLayoutTestActivity"/>
-        <activity android:name=".ui.activitys.RealTestSlideLayoutActivity"/>
-        <activity android:name=".ui.activitys.SmartRefreshLayoutTestActivity"/>
-        <activity android:name=".ui.activitys.RealTestSmartRefreshLayoutActivity"/>
+        <activity android:name=".ui.activitys.instruction_1.LoggerTestActivity"/>
+        <activity android:name=".ui.activitys.instruction_1.AnimationTestActivity"/>
+        <activity android:name=".ui.activitys.instruction_1.CoordinatorLayoutTestActivity"/>
+        <activity android:name=".ui.activitys.instruction_1.SlideLayoutTestActivity"/>
+        <activity android:name=".ui.activitys.instruction_1.SmartRefreshLayoutTestActivity"/>
+        <activity android:name=".ui.activitys.instruction_1.SwipeRefreshLayoutTestActivity"/>
+        <activity android:name=".ui.activitys.real_2.RealTestLoggerActivity"/>
+        <activity android:name=".ui.activitys.real_2.RealTestAnimation0Activity"/>
+        <activity android:name=".ui.activitys.real_2.RealTestCoordinatorLayoutActivity"/>
+        <activity android:name=".ui.activitys.real_2.RealTestSlideLayoutActivity"/>
+        <activity android:name=".ui.activitys.real_2.RealTestSmartRefreshLayoutActivity"/>
+        <activity android:name=".ui.activitys.real_2.RealTestSwipeRefreshLayoutActivity"/>
+        <activity android:name=".ui.activitys.real_2.real_2_2.CoordinatorActivity_2_2"/>
+
     </application>
 
 </manifest>

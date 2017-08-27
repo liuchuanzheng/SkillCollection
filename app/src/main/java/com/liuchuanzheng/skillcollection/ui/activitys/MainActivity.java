@@ -13,6 +13,12 @@ import android.widget.TextView;
 import com.liuchuanzheng.skillcollection.R;
 import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
 import com.liuchuanzheng.skillcollection.ui.DividerItemDecoration;
+import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.AnimationTestActivity;
+import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.CoordinatorLayoutTestActivity;
+import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.LoggerTestActivity;
+import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.SlideLayoutTestActivity;
+import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.SmartRefreshLayoutTestActivity;
+import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.SwipeRefreshLayoutTestActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,7 +27,7 @@ public class MainActivity extends LCZBaseActivity {
     @BindView(R.id.rcv)
     RecyclerView recyclerView;
     private MyAdapter mAdapter;//recyclerview的适配器
-    private String[] strings = {"logger","基本动画","SwipeRefreshLayout","SlideLayout","SmartRefreshLayout","5"};
+    private String[] strings = {"logger","基本动画","SwipeRefreshLayout","SlideLayout","SmartRefreshLayout","CoordinatorLayout"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +80,10 @@ public class MainActivity extends LCZBaseActivity {
             case 4:
                 //测试SmartRefreshLayout
                 SmartRefreshLayoutTestActivity.startAction((Activity) baseContext);
+                break;
+            case 5:
+                //测试CoordinatorLayout
+                CoordinatorLayoutTestActivity.startAction((Activity) baseContext);
                 break;
 
         }

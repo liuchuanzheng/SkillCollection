@@ -1,4 +1,4 @@
-package com.liuchuanzheng.skillcollection.ui.activitys;
+package com.liuchuanzheng.skillcollection.ui.activitys.instruction_1;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 
 import com.liuchuanzheng.skillcollection.R;
 import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
+import com.liuchuanzheng.skillcollection.ui.activitys.real_2.RealTestLoggerActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
