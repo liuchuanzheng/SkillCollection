@@ -27,7 +27,8 @@ public class MainActivity extends LCZBaseActivity {
     @BindView(R.id.rcv)
     RecyclerView recyclerView;
     private MyAdapter mAdapter;//recyclerview的适配器
-    private String[] strings = {"logger","基本动画","SwipeRefreshLayout","SlideLayout","SmartRefreshLayout","CoordinatorLayout"};
+    private String[] strings = {"logger","基本动画","SwipeRefreshLayout","SlideLayout",
+            "SmartRefreshLayout","CoordinatorLayout","EventBus"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +84,10 @@ public class MainActivity extends LCZBaseActivity {
                 break;
             case 5:
                 //测试CoordinatorLayout
+                CoordinatorLayoutTestActivity.startAction((Activity) baseContext);
+                break;
+            case 6:
+                //测试eventbus
                 CoordinatorLayoutTestActivity.startAction((Activity) baseContext);
                 break;
 

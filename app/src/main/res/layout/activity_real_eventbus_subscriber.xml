@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="131dp"
+        android:text="跳转到发送者界面" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="注册事件"
+        android:layout_below="@+id/go"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/unregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="43dp"
+        android:text="解注册事件"
+        android:layout_below="@+id/register"
+        android:layout_alignLeft="@+id/register"
+        android:layout_alignStart="@+id/register" />
+</RelativeLayout>
