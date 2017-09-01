@@ -6,9 +6,15 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.liuchuanzheng.skillcollection.R;
 import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
+import com.liuchuanzheng.skillcollection.bean.MessageEvent;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,24 +50,25 @@ public class RealTestEventBusActivity_Subscriber extends LCZBaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.go:
+                RealTestEventBusActivity_Publisher.startAction((Activity) baseContext);
                 break;
             case R.id.register:
+                EventBus.getDefault().register(this);
                 break;
             case R.id.unregister:
+                EventBus.getDefault().unregister(this);
                 break;
         }
     }
 
-
-    /**
-     * 为recyclerView定义的点击接口
-     */
-    public interface OnClickListener {
-        void onClick(int position);
-
-        void onLongClick(int position);
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void eventBusReceiveMessageEvent(MessageEvent messageEvent){
+        Toast.makeText(this,"收到了消息:" + messageEvent.getMessage(),Toast.LENGTH_SHORT).show();
     }
-
+    @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
+    public void onMoonStickyEvent(MessageEvent messageEvent){
+        Toast.makeText(this,"收到了消息:" + messageEvent.getMessage(),Toast.LENGTH_SHORT).show();
+    }
 
     private void realTest() {
     }

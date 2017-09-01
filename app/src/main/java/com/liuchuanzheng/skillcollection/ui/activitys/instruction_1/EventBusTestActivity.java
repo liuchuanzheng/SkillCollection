@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.liuchuanzheng.skillcollection.R;
 import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
-import com.liuchuanzheng.skillcollection.ui.activitys.real_2.RealTestCoordinatorLayoutActivity;
+import com.liuchuanzheng.skillcollection.ui.activitys.real_2.real_2_2.RealTestEventBusActivity_Subscriber;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -62,6 +62,6 @@ public class EventBusTestActivity extends LCZBaseActivity {
 
     @OnClick(R.id.ib_right)
     public void onViewClicked() {
-        RealTestCoordinatorLayoutActivity.startAction((Activity) baseContext);
+        RealTestEventBusActivity_Subscriber.startAction((Activity) baseContext);
     }
 }

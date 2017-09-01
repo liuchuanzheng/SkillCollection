@@ -15,6 +15,7 @@ import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
 import com.liuchuanzheng.skillcollection.ui.DividerItemDecoration;
 import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.AnimationTestActivity;
 import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.CoordinatorLayoutTestActivity;
+import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.EventBusTestActivity;
 import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.LoggerTestActivity;
 import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.SlideLayoutTestActivity;
 import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.SmartRefreshLayoutTestActivity;
@@ -88,7 +89,7 @@ public class MainActivity extends LCZBaseActivity {
                 break;
             case 6:
                 //测试eventbus
-                CoordinatorLayoutTestActivity.startAction((Activity) baseContext);
+                EventBusTestActivity.startAction((Activity) baseContext);
                 break;
 
         }

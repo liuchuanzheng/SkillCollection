@@ -33,6 +33,8 @@
         <activity android:name=".ui.activitys.real_2.real_2_2.CoordinatorActivity_2_2"/>
         <activity android:name=".ui.activitys.real_2.real_2_2.CoordinatorActivity_2_2_AppBar"/>
         <activity android:name=".ui.activitys.instruction_1.EventBusTestActivity"/>
+        <activity android:name=".ui.activitys.real_2.real_2_2.RealTestEventBusActivity_Subscriber"/>
+        <activity android:name=".ui.activitys.real_2.real_2_2.RealTestEventBusActivity_Publisher"/>
 
     </application>
 
