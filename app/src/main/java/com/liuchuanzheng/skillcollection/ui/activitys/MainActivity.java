@@ -20,6 +20,7 @@ import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.LoggerTestAc
 import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.SlideLayoutTestActivity;
 import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.SmartRefreshLayoutTestActivity;
 import com.liuchuanzheng.skillcollection.ui.activitys.instruction_1.SwipeRefreshLayoutTestActivity;
+import com.liuchuanzheng.skillcollection.ui.activitys.notifycation_7.Notifycation_Instruction_Activity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,7 +30,7 @@ public class MainActivity extends LCZBaseActivity {
     RecyclerView recyclerView;
     private MyAdapter mAdapter;//recyclerview的适配器
     private String[] strings = {"logger","基本动画","SwipeRefreshLayout","SlideLayout",
-            "SmartRefreshLayout","CoordinatorLayout","EventBus"};
+            "SmartRefreshLayout","CoordinatorLayout","EventBus","notifycation"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +91,10 @@ public class MainActivity extends LCZBaseActivity {
             case 6:
                 //测试eventbus
                 EventBusTestActivity.startAction((Activity) baseContext);
+                break;
+            case 7:
+                //测试eventbus
+                Notifycation_Instruction_Activity.startAction((Activity) baseContext);
                 break;
 
         }
