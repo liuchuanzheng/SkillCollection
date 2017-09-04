@@ -1,4 +1,4 @@
-package com.liuchuanzheng.skillcollection.ui.activitys.instruction_1;
+package com.liuchuanzheng.skillcollection.ui.activitys.eventbus_7;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.liuchuanzheng.skillcollection.R;
 import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
-import com.liuchuanzheng.skillcollection.ui.activitys.real_2.RealTestCoordinatorLayoutActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,7 +22,7 @@ import butterknife.OnClick;
  * 注意事项:
  */
 
-public class CoordinatorLayoutTestActivity extends LCZBaseActivity {
+public class EventBusTestActivity extends LCZBaseActivity {
     @BindView(R.id.tv_title)
     TextView tvTitle;
     @BindView(R.id.ib_right)
@@ -42,10 +41,10 @@ public class CoordinatorLayoutTestActivity extends LCZBaseActivity {
     }
 
     private void initView() {
-        tvTitle.setText("CoordinatorLayout");
-        tvMessage.setText("super-powered FrameLayout 协调者布局");
-        textView.setText("学习地址: http://www.jianshu.com/p/4a77ae4cd82f \n" +
-                "协调子 View 之间交互的容器。主要处理滚动事件");
+        tvTitle.setText("EventBus");
+        tvMessage.setText("Android事件总线");
+        textView.setText("学习地址: http://m.blog.csdn.net/JiangWeiHu/article/details/77338159 \n" +
+                "为了更简化并更高质量的在Activity，Fragment，Thread和Service等之间的通信，解决组件之间高耦合的同时仍能进行高效的通信。");
     }
 
     /**
@@ -54,7 +53,7 @@ public class CoordinatorLayoutTestActivity extends LCZBaseActivity {
      * @param activity
      */
     public static void startAction(Activity activity) {
-        Intent intent = new Intent(activity, CoordinatorLayoutTestActivity.class);
+        Intent intent = new Intent(activity, EventBusTestActivity.class);
         activity.startActivity(intent);
         activity.overridePendingTransition(R.anim.fade_in,
                 R.anim.fade_out);
@@ -62,6 +61,6 @@ public class CoordinatorLayoutTestActivity extends LCZBaseActivity {
 
     @OnClick(R.id.ib_right)
     public void onViewClicked() {
-        RealTestCoordinatorLayoutActivity.startAction((Activity) baseContext);
+        RealTestEventBusActivity_Subscriber.startAction((Activity) baseContext);
     }
 }

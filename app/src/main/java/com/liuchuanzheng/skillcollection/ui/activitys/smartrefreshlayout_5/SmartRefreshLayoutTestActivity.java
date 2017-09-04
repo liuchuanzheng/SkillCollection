@@ -1,4 +1,4 @@
-package com.liuchuanzheng.skillcollection.ui.activitys.instruction_1;
+package com.liuchuanzheng.skillcollection.ui.activitys.smartrefreshlayout_5;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.liuchuanzheng.skillcollection.R;
 import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
-import com.liuchuanzheng.skillcollection.ui.activitys.real_2.RealTestSwipeRefreshLayoutActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,7 +22,7 @@ import butterknife.OnClick;
  * 注意事项:
  */
 
-public class SwipeRefreshLayoutTestActivity extends LCZBaseActivity {
+public class SmartRefreshLayoutTestActivity extends LCZBaseActivity {
     @BindView(R.id.tv_title)
     TextView tvTitle;
     @BindView(R.id.ib_right)
@@ -42,8 +41,10 @@ public class SwipeRefreshLayoutTestActivity extends LCZBaseActivity {
     }
 
     private void initView() {
-        tvTitle.setText("SwipeRefreshLayout");
-        tvMessage.setText("配合recyclerView使用");
+        tvTitle.setText("SmartRefreshLayout");
+        tvMessage.setText("一个各种头布局脚布局刷新库");
+        textView.setText("gitHub地址: https://github.com/scwang90/SmartRefreshLayout \n" +
+                "下拉刷新、上拉加载、RefreshLayout、OverScroll，Android智能下拉刷新框架，支持越界回弹，具有极强的扩展性，集成了几十种炫酷的Header和 Footer。");
     }
 
     /**
@@ -52,7 +53,7 @@ public class SwipeRefreshLayoutTestActivity extends LCZBaseActivity {
      * @param activity
      */
     public static void startAction(Activity activity) {
-        Intent intent = new Intent(activity, SwipeRefreshLayoutTestActivity.class);
+        Intent intent = new Intent(activity, SmartRefreshLayoutTestActivity.class);
         activity.startActivity(intent);
         activity.overridePendingTransition(R.anim.fade_in,
                 R.anim.fade_out);
@@ -60,6 +61,6 @@ public class SwipeRefreshLayoutTestActivity extends LCZBaseActivity {
 
     @OnClick(R.id.ib_right)
     public void onViewClicked() {
-        RealTestSwipeRefreshLayoutActivity.startAction((Activity) baseContext);
+        RealTestSmartRefreshLayoutActivity.startAction((Activity) baseContext);
     }
 }

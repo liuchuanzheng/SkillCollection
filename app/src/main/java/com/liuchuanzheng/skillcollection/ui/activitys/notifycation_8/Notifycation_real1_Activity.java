@@ -1,4 +1,4 @@
-package com.liuchuanzheng.skillcollection.ui.activitys.notifycation_7;
+package com.liuchuanzheng.skillcollection.ui.activitys.notifycation_8;
 
 import android.app.Activity;
 import android.app.Notification;

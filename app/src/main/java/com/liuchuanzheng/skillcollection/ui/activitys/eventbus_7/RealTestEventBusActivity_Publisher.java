@@ -1,4 +1,4 @@
-package com.liuchuanzheng.skillcollection.ui.activitys.real_2.real_2_2;
+package com.liuchuanzheng.skillcollection.ui.activitys.eventbus_7;
 
 import android.app.Activity;
 import android.content.Intent;

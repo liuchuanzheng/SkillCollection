@@ -1,4 +1,4 @@
-package com.liuchuanzheng.skillcollection.ui.activitys.notifycation_7;
+package com.liuchuanzheng.skillcollection.ui.activitys.notifycation_8;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.liuchuanzheng.skillcollection.R;
 import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
-import com.liuchuanzheng.skillcollection.ui.activitys.real_2.real_2_2.RealTestEventBusActivity_Subscriber;
+import com.liuchuanzheng.skillcollection.ui.activitys.notifycation_8.Notifycation_real1_Activity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

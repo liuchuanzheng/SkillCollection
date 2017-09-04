@@ -1,4 +1,4 @@
-package com.liuchuanzheng.skillcollection.ui.activitys.real_2;
+package com.liuchuanzheng.skillcollection.ui.activitys.coordinatorlayout_6;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -19,7 +19,6 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import cn.yan.library.SlideLayout;
 
 /**
  * Created by 刘传政 on 2017/7/4 0004.
@@ -29,7 +28,7 @@ import cn.yan.library.SlideLayout;
  * 注意事项:
  */
 
-public class RealTestSlideLayoutActivity extends LCZBaseActivity {
+public class RealTestCoordinatorLayoutActivity extends LCZBaseActivity {
     @BindView(R.id.rcv)
     RecyclerView rcv;
     private MyAdapter mAdapter;//recyclerview的适配器
@@ -38,7 +37,7 @@ public class RealTestSlideLayoutActivity extends LCZBaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_real_slide);
+        setContentView(R.layout.activity_real_coordinatorlayout);
         ButterKnife.bind(this);
         realTest();
     }
@@ -67,7 +66,7 @@ public class RealTestSlideLayoutActivity extends LCZBaseActivity {
         @Override
         public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             MyViewHolder holder = new MyViewHolder(LayoutInflater.from(
-                    baseContext).inflate(R.layout.item_slide, parent,
+                    baseContext).inflate(R.layout.item_smart, parent,
                     false));
             return holder;
         }
@@ -76,15 +75,6 @@ public class RealTestSlideLayoutActivity extends LCZBaseActivity {
         public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
             holder.tv.setText(mList.get(position));
-            holder.tv_right.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(baseContext,"点击了左拉出的菜单"+position,Toast.LENGTH_SHORT).show();
-                    //平滑的关闭侧拉
-                    holder.sl.smoothCloseSlide();
-
-                }
-            });
 
             if (onClickListener != null) {
                 holder.tv.setOnClickListener(new View.OnClickListener() {
@@ -111,21 +101,25 @@ public class RealTestSlideLayoutActivity extends LCZBaseActivity {
         class MyViewHolder extends RecyclerView.ViewHolder {
 
             TextView tv;
-            TextView tv_right;
-            SlideLayout sl;
 
             public MyViewHolder(View view) {
                 super(view);
                 tv = (TextView) view.findViewById(R.id.tv_item);
-                tv_right = (TextView) view.findViewById(R.id.tv_right);
-                sl = (SlideLayout) view.findViewById(R.id.sl_rcv);
             }
         }
     }
 
     private void realTest() {
-        for (int i = 0; i < 20; i++) {
-            mList.add(i, "我是第" + (i + 1) + "条数据");
+        for (int i = 0; i < 2; i++) {
+            String message = "";
+            if(i == 0){
+                //Material风格头
+                message = "结合FloatingActionButton";
+            }else if (i == 1){
+                //古典风格头
+                message = "结合AppBarLayout";
+            }
+            mList.add(i,message);
         }
         rcv.setLayoutManager(new GridLayoutManager(this, 2));
         mAdapter = new MyAdapter();
@@ -134,6 +128,11 @@ public class RealTestSlideLayoutActivity extends LCZBaseActivity {
             @Override
             public void onClick(int position) {
                 Toast.makeText(baseContext, position + "", Toast.LENGTH_SHORT).show();
+                if(position == 0){
+                    CoordinatorActivity_2_2.startAction((Activity) baseContext);
+                }else if (position == 1){
+                    CoordinatorActivity_2_2_AppBar.startAction((Activity) baseContext);
+                }
             }
 
             @Override
@@ -150,7 +149,7 @@ public class RealTestSlideLayoutActivity extends LCZBaseActivity {
      * @param activity
      */
     public static void startAction(Activity activity) {
-        Intent intent = new Intent(activity, RealTestSlideLayoutActivity.class);
+        Intent intent = new Intent(activity, RealTestCoordinatorLayoutActivity.class);
         activity.startActivity(intent);
         activity.overridePendingTransition(R.anim.fade_in,
                 R.anim.fade_out);

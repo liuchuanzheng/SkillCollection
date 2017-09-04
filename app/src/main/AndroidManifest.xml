@@ -18,25 +18,25 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activitys.MainActivity"/>
-        <activity android:name=".ui.activitys.instruction_1.LoggerTestActivity"/>
-        <activity android:name=".ui.activitys.instruction_1.AnimationTestActivity"/>
-        <activity android:name=".ui.activitys.instruction_1.CoordinatorLayoutTestActivity"/>
-        <activity android:name=".ui.activitys.instruction_1.SlideLayoutTestActivity"/>
-        <activity android:name=".ui.activitys.instruction_1.SmartRefreshLayoutTestActivity"/>
-        <activity android:name=".ui.activitys.instruction_1.SwipeRefreshLayoutTestActivity"/>
-        <activity android:name=".ui.activitys.real_2.RealTestLoggerActivity"/>
-        <activity android:name=".ui.activitys.real_2.RealTestAnimation0Activity"/>
-        <activity android:name=".ui.activitys.real_2.RealTestCoordinatorLayoutActivity"/>
-        <activity android:name=".ui.activitys.real_2.RealTestSlideLayoutActivity"/>
-        <activity android:name=".ui.activitys.real_2.RealTestSmartRefreshLayoutActivity"/>
-        <activity android:name=".ui.activitys.real_2.RealTestSwipeRefreshLayoutActivity"/>
-        <activity android:name=".ui.activitys.real_2.real_2_2.CoordinatorActivity_2_2"/>
-        <activity android:name=".ui.activitys.real_2.real_2_2.CoordinatorActivity_2_2_AppBar"/>
-        <activity android:name=".ui.activitys.instruction_1.EventBusTestActivity"/>
-        <activity android:name=".ui.activitys.real_2.real_2_2.RealTestEventBusActivity_Subscriber"/>
-        <activity android:name=".ui.activitys.real_2.real_2_2.RealTestEventBusActivity_Publisher"/>
-        <activity android:name=".ui.activitys.notifycation_7.Notifycation_Instruction_Activity"/>
-        <activity android:name=".ui.activitys.notifycation_7.Notifycation_real1_Activity"/>
+        <activity android:name=".ui.activitys.logger_1.LoggerTestActivity"/>
+        <activity android:name=".ui.activitys.animation_2.AnimationTestActivity"/>
+        <activity android:name=".ui.activitys.coordinatorlayout_6.CoordinatorLayoutTestActivity"/>
+        <activity android:name=".ui.activitys.slidelayout_4.SlideLayoutTestActivity"/>
+        <activity android:name=".ui.activitys.smartrefreshlayout_5.SmartRefreshLayoutTestActivity"/>
+        <activity android:name=".ui.activitys.swiperefreshlayout_3.SwipeRefreshLayoutTestActivity"/>
+        <activity android:name=".ui.activitys.logger_1.RealTestLoggerActivity"/>
+        <activity android:name=".ui.activitys.animation_2.RealTestAnimation0Activity"/>
+        <activity android:name=".ui.activitys.coordinatorlayout_6.RealTestCoordinatorLayoutActivity"/>
+        <activity android:name=".ui.activitys.slidelayout_4.RealTestSlideLayoutActivity"/>
+        <activity android:name=".ui.activitys.smartrefreshlayout_5.RealTestSmartRefreshLayoutActivity"/>
+        <activity android:name=".ui.activitys.swiperefreshlayout_3.RealTestSwipeRefreshLayoutActivity"/>
+        <activity android:name=".ui.activitys.coordinatorlayout_6.CoordinatorActivity_2_2"/>
+        <activity android:name=".ui.activitys.coordinatorlayout_6.CoordinatorActivity_2_2_AppBar"/>
+        <activity android:name=".ui.activitys.eventbus_7.EventBusTestActivity"/>
+        <activity android:name=".ui.activitys.eventbus_7.RealTestEventBusActivity_Subscriber"/>
+        <activity android:name=".ui.activitys.eventbus_7.RealTestEventBusActivity_Publisher"/>
+        <activity android:name=".ui.activitys.notifycation_8.Notifycation_Instruction_Activity"/>
+        <activity android:name=".ui.activitys.notifycation_8.Notifycation_real1_Activity"/>
 
     </application>
 

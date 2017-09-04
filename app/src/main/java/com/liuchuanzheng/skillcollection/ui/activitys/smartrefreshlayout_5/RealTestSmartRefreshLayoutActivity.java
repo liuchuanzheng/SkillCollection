@@ -1,4 +1,4 @@
-package com.liuchuanzheng.skillcollection.ui.activitys.real_2;
+package com.liuchuanzheng.skillcollection.ui.activitys.smartrefreshlayout_5;
 
 import android.app.Activity;
 import android.content.Intent;
