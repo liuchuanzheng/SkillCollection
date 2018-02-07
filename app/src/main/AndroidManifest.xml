@@ -38,6 +38,8 @@
         <activity android:name=".ui.activitys.notifycation_8.Notifycation_Instruction_Activity"/>
         <activity android:name=".ui.activitys.notifycation_8.Notifycation_real1_Activity"/>
         <activity android:name=".ui.activitys.coordinatorlayout_6.CoordinatorActivity_2_2_ViewPager" />
+        <activity android:name=".ui.activitys.textInputlayout.TextinputLayoutTestActivity" />
+        <activity android:name=".ui.activitys.textInputlayout.RealTestActivity" />
 
     </application>
 

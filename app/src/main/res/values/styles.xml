@@ -8,4 +8,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#d12b2b</item>
+    </style>
+<!--这是当文字长度超过之后的显示样式-->
+    <style name="MyStyle2">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#a11c1c</item>
+    </style>
+    <!--这是错误提示的样式-->
+    <style name="MyStyle3">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#3d29a9</item>
+    </style>
+
 </resources>

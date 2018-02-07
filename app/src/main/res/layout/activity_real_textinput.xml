@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="你好"/>
+    <android.support.design.widget.TextInputLayout
+        android:layout_centerVertical="true"
+        android:id="@+id/til"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:hintTextAppearance="@style/MyStyle"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:counterOverflowTextAppearance="@style/MyStyle2"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/MyStyle3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <EditText
+          android:singleLine="true"
+          android:id="@+id/et"
+          android:hint="我是hint"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:hint="我是hint2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+</RelativeLayout>
