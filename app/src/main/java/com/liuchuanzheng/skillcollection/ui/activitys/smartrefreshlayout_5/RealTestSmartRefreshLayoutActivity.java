@@ -14,9 +14,8 @@ import android.widget.Toast;
 
 import com.liuchuanzheng.skillcollection.R;
 import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
-import com.scwang.smartrefresh.header.CircleHeader;
 import com.scwang.smartrefresh.header.DeliveryHeader;
-import com.scwang.smartrefresh.header.DropboxHeader;
+import com.scwang.smartrefresh.header.DropBoxHeader;
 import com.scwang.smartrefresh.header.FlyRefreshHeader;
 import com.scwang.smartrefresh.header.FunGameBattleCityHeader;
 import com.scwang.smartrefresh.header.MaterialHeader;
@@ -30,7 +29,7 @@ import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
 import com.scwang.smartrefresh.layout.footer.BallPulseFooter;
 import com.scwang.smartrefresh.layout.header.BezierRadarHeader;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
-import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
+import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.ArrayList;
@@ -173,13 +172,14 @@ public class RealTestSmartRefreshLayoutActivity extends LCZBaseActivity {
                 Toast.makeText(baseContext, position + "", Toast.LENGTH_SHORT).show();
                 if(position == 0){
                     //Material风格头
-                    refreshLayout.setRefreshHeader(new MaterialHeader(baseContext).setShowBezierWave(true));
+                    refreshLayout.setRefreshHeader(new MaterialHeader(baseContext).setShowBezierWave(false));
+                    refreshLayout.setEnableHeaderTranslationContent(false);
                 }else if (position == 1){
                     //古典风格头
                     refreshLayout.setRefreshHeader(new ClassicsHeader(baseContext));
                 }else if (position == 2){
                     //盒子风格头
-                    refreshLayout.setRefreshHeader(new DropboxHeader(baseContext));
+                    refreshLayout.setRefreshHeader(new DropBoxHeader(baseContext));
                 }else if (position == 3){
                     //纸飞机头
                     refreshLayout.setRefreshHeader(new FlyRefreshHeader(baseContext));
@@ -189,7 +189,7 @@ public class RealTestSmartRefreshLayoutActivity extends LCZBaseActivity {
                 }else if (position == 5){
                     refreshLayout.setRefreshHeader(new DeliveryHeader(baseContext));
                 }else if (position == 6){
-                    refreshLayout.setRefreshHeader(new CircleHeader(baseContext));
+                    //refreshLayout.setRefreshHeader(new CircleHeader(baseContext));
                 }else if (position == 7){
                     refreshLayout.setRefreshHeader(new FunGameBattleCityHeader(baseContext));
                 }else if (position == 8){
@@ -225,10 +225,10 @@ public class RealTestSmartRefreshLayoutActivity extends LCZBaseActivity {
                 refreshlayout.finishRefresh(2000);
             }
         });
-        refreshLayout.setOnLoadmoreListener(new OnLoadmoreListener() {
+        refreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
             @Override
-            public void onLoadmore(RefreshLayout refreshlayout) {
-                refreshlayout.finishLoadmore(2000);
+            public void onLoadMore(RefreshLayout refreshlayout) {
+                refreshlayout.finishLoadMore(2000/*,false*/);//传入false表示加载失败
             }
         });
     }
