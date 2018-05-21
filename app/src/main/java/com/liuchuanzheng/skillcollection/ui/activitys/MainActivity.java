@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.transition.Slide;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.youth.banner.Banner;
+
 import com.liuchuanzheng.skillcollection.R;
 import com.liuchuanzheng.skillcollection.base.LCZBaseActivity;
 import com.liuchuanzheng.skillcollection.ui.DividerItemDecoration;
@@ -18,6 +20,7 @@ import com.liuchuanzheng.skillcollection.ui.activitys.coordinatorlayout_6.Coordi
 import com.liuchuanzheng.skillcollection.ui.activitys.eventbus_7.EventBusTestActivity;
 import com.liuchuanzheng.skillcollection.ui.activitys.logger_1.LoggerTestActivity;
 import com.liuchuanzheng.skillcollection.ui.activitys.notifycation_8.Notifycation_Instruction_Activity;
+import com.liuchuanzheng.skillcollection.ui.activitys.shareelement_9.Instruction_Activity;
 import com.liuchuanzheng.skillcollection.ui.activitys.slidelayout_4.SlideLayoutTestActivity;
 import com.liuchuanzheng.skillcollection.ui.activitys.smartrefreshlayout_5.SmartRefreshLayoutTestActivity;
 import com.liuchuanzheng.skillcollection.ui.activitys.swiperefreshlayout_3.SwipeRefreshLayoutTestActivity;
@@ -31,7 +34,7 @@ public class MainActivity extends LCZBaseActivity {
     RecyclerView recyclerView;
     private MyAdapter mAdapter;//recyclerview的适配器
     private String[] strings = {"logger","基本动画","SwipeRefreshLayout","SlideLayout",
-            "SmartRefreshLayout","CoordinatorLayout","EventBus","notifycation","TextInputLayout"};
+            "SmartRefreshLayout","CoordinatorLayout","EventBus","notifycation","TextInputLayout","共享元素"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +101,9 @@ public class MainActivity extends LCZBaseActivity {
                 break;
             case 8:
                 TextinputLayoutTestActivity.startAction((Activity) baseContext);
+                break;
+            case 9:
+                Instruction_Activity.startAction((Activity) baseContext);
                 break;
 
         }
@@ -166,7 +172,8 @@ public class MainActivity extends LCZBaseActivity {
     public static void startAction(Activity activity){
         Intent intent = new Intent(activity, MainActivity.class);
         activity.startActivity(intent);
-        activity.overridePendingTransition(R.anim.act_fade_in_center,
-                R.anim.fade_out);
+        //fade_in是第二个界面的进入动画，fade_out是第一个界面退出动画
+        //5.0之前的overridePendingTransition
+        activity.overridePendingTransition(R.anim.act_fade_in_1, R.anim.act_fade_out_1);
     }
 }

@@ -40,6 +40,9 @@
         <activity android:name=".ui.activitys.coordinatorlayout_6.CoordinatorActivity_2_2_ViewPager" />
         <activity android:name=".ui.activitys.textInputlayout.TextinputLayoutTestActivity" />
         <activity android:name=".ui.activitys.textInputlayout.RealTestActivity" />
+        <activity android:name=".ui.activitys.shareelement_9.Instruction_Activity" />
+        <activity android:name=".ui.activitys.shareelement_9.real1_Activity" />
+        <activity android:name=".ui.activitys.shareelement_9.real2_Activity" />
 
     </application>
 

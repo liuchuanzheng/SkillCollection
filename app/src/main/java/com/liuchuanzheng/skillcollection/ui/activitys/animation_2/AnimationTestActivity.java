@@ -1,11 +1,14 @@
 package com.liuchuanzheng.skillcollection.ui.activitys.animation_2;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.transition.Slide;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,7 +47,23 @@ public class AnimationTestActivity extends LCZBaseActivity {
         setContentView(R.layout.activity_animation);
         ButterKnife.bind(this);
         initView();
+        setActivityAnimation();
 
+    }
+    private void setActivityAnimation() {
+        // 侧滑动画
+        Slide transition = new Slide();
+        transition.setSlideEdge(Gravity.LEFT);
+        transition.setDuration(500);
+        //此activity进入
+        getWindow().setEnterTransition(transition);
+        //此activity退出
+        getWindow().setExitTransition(transition);
+
+        //再次进入时使用(如果当前Activity已经打开过，并且再次打开该Activity时的动画 )
+        //getWindow().setReenterTransition(new Explode().setDuration(2000));
+        //决定在两个Activity之间切换时，指定两个Activity中对应的View的过渡效果
+        // getWindow().setSharedElementEnterTransition(new Explode().setDuration(2000));
     }
 
     private void initView() {
@@ -83,9 +102,8 @@ public class AnimationTestActivity extends LCZBaseActivity {
      */
     public static void startAction(Activity activity) {
         Intent intent = new Intent(activity, AnimationTestActivity.class);
-        activity.startActivity(intent);
-        activity.overridePendingTransition(R.anim.fade_in,
-                R.anim.fade_out);
+        //5.0之后的写法
+        activity.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(activity).toBundle());
     }
 
     @OnClick(R.id.ib_right)

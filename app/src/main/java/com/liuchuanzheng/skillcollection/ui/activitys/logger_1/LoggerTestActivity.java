@@ -1,9 +1,12 @@
 package com.liuchuanzheng.skillcollection.ui.activitys.logger_1;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
 import android.widget.ImageButton;
 
 import com.liuchuanzheng.skillcollection.R;
@@ -32,6 +35,22 @@ public class LoggerTestActivity extends LCZBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logger);
         ButterKnife.bind(this);
+        setActivityAnimation();
+    }
+
+    private void setActivityAnimation() {
+        // 侧滑动画
+        //从xml读取的方式
+        Transition transition = TransitionInflater.from(this).inflateTransition(R.transition.slide_from_lsft);
+        //此activity进入
+        getWindow().setEnterTransition(transition);
+        //此activity退出
+        getWindow().setExitTransition(transition);
+
+        //再次进入时使用(如果当前Activity已经打开过，并且再次打开该Activity时的动画 )
+        //getWindow().setReenterTransition(new Explode().setDuration(2000));
+        //决定在两个Activity之间切换时，指定两个Activity中对应的View的过渡效果
+        // getWindow().setSharedElementEnterTransition(new Explode().setDuration(2000));
     }
 
 
@@ -42,9 +61,8 @@ public class LoggerTestActivity extends LCZBaseActivity {
      */
     public static void startAction(Activity activity) {
         Intent intent = new Intent(activity, LoggerTestActivity.class);
-        activity.startActivity(intent);
-        activity.overridePendingTransition(R.anim.fade_in,
-                R.anim.fade_out);
+        //5.0之后的写法
+        activity.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(activity).toBundle());
     }
 
     @OnClick(R.id.ib_right)
