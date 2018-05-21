@@ -51,7 +51,8 @@ public class real2_Activity extends LCZBaseActivity {
     }
     @OnClick(R.id.imageView)
     public void onViewClicked() {
-        real1_Activity.startAction((Activity) baseContext);
+        //real1_Activity.startAction((Activity) baseContext);
+        finish();
     }
 
 }
