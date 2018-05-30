@@ -34,7 +34,8 @@ public class MainActivity extends LCZBaseActivity {
     RecyclerView recyclerView;
     private MyAdapter mAdapter;//recyclerview的适配器
     private String[] strings = {"logger","基本动画","SwipeRefreshLayout","SlideLayout",
-            "SmartRefreshLayout","CoordinatorLayout","EventBus","notifycation","TextInputLayout","共享元素"};
+            "SmartRefreshLayout","CoordinatorLayout","EventBus","notifycation","TextInputLayout"
+            ,"共享元素","BaseRecyclerViewAdapterHelper"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +105,9 @@ public class MainActivity extends LCZBaseActivity {
                 break;
             case 9:
                 Instruction_Activity.startAction((Activity) baseContext);
+                break;
+            case 10:
+                com.liuchuanzheng.skillcollection.ui.activitys.BaseRecyclerViewAdapterHelper_10.Instruction_Activity.startAction((Activity) baseContext);
                 break;
 
         }
