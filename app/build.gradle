@@ -21,28 +21,28 @@ android {
 
 dependencies {
     implementation 'com.android.support:support-v4:25.3.1'
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
-    compile 'com.jakewharton:butterknife:8.6.0'
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.orhanobut:logger:2.1.1'
-    compile project(':SlideLayout_library')
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support:recyclerview-v7:25.3.1'
+    implementation 'com.orhanobut:logger:2.1.1'
+    implementation project(':SlideLayout_library')
+    implementation 'com.android.support:appcompat-v7:25.3.1'
     //compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.2'
     //compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.2'
     //1.1.0 API改动过大，老用户升级需谨慎
-    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-4'
-    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-4'//没有使用特殊Header，可以不加这行
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-4'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-4'//没有使用特殊Header，可以不加这行
     //如果使用了特殊的Header
-    compile 'com.android.support:design:25.3.1'
-    compile 'org.greenrobot:eventbus:3.0.0'
-    compile 'com.youth.banner:banner:1.4.10'  //最新版本
+    implementation 'com.android.support:design:25.3.1'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.youth.banner:banner:1.4.10'  //最新版本
 
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
 }
