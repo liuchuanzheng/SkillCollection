@@ -45,6 +45,7 @@
         <activity android:name=".ui.activitys.shareelement_9.real2_Activity" />
         <activity android:name=".ui.activitys.BaseRecyclerViewAdapterHelper_10.Instruction_Activity" />
         <activity android:name=".ui.activitys.BaseRecyclerViewAdapterHelper_10.Real1_Activity" />
+        <activity android:name=".ui.activitys.coordinatorlayout_6.CoordinatorActivity_2_2_4" />
 
     </application>
 

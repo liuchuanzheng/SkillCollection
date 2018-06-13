@@ -110,7 +110,7 @@ public class RealTestCoordinatorLayoutActivity extends LCZBaseActivity {
     }
 
     private void realTest() {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             String message = "";
             if(i == 0){
                 message = "结合FloatingActionButton";
@@ -118,6 +118,8 @@ public class RealTestCoordinatorLayoutActivity extends LCZBaseActivity {
                 message = "结合AppBarLayout";
             }else if (i == 2){
                 message = "结合ViewPager";
+            }else if (i == 3){
+                message = "结合AppBarLayout";
             }
             mList.add(i,message);
         }
@@ -134,6 +136,8 @@ public class RealTestCoordinatorLayoutActivity extends LCZBaseActivity {
                     CoordinatorActivity_2_2_AppBar.startAction((Activity) baseContext);
                 }else if (position == 2){
                     CoordinatorActivity_2_2_ViewPager.startAction((Activity) baseContext);
+                }else if (position == 3){
+                    CoordinatorActivity_2_2_4.startAction((Activity) baseContext);
                 }
             }
 
