@@ -3,12 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rcv"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
+        <com.liuchuanzheng.skillcollection.ui.activitys.BaseRecyclerViewAdapterHelper_10.MyRecyclerView
+            android:id="@+id/rcv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    </android.support.v7.widget.RecyclerView>
+        </com.liuchuanzheng.skillcollection.ui.activitys.BaseRecyclerViewAdapterHelper_10.MyRecyclerView>
+    </ScrollView>
+
 
 </RelativeLayout>

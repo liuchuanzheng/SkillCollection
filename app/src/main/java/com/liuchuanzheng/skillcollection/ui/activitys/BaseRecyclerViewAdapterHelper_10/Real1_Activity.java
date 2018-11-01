@@ -61,6 +61,10 @@ public class Real1_Activity extends LCZBaseActivity {
 
         myAdapter.enableDragItem(itemTouchHelper);
         rcv.setAdapter(myAdapter);
+        //限制了RecyclerView自身的滑动，整个页面滑动仅依靠ScrollView实现，即可解决滑动卡顿的问题
+        //这样recycleview的性能会降低。 尽量避免scrollview嵌套recyclerview
+        rcv.setHasFixedSize(true);
+        rcv.setNestedScrollingEnabled(false);
         myAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {

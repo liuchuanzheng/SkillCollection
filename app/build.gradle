@@ -45,4 +45,6 @@ dependencies {
     implementation 'com.youth.banner:banner:1.4.10'  //最新版本
 
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    //gif播放库
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'
 }

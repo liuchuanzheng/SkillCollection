@@ -200,6 +200,7 @@ public class RealTestSmartRefreshLayoutActivity extends LCZBaseActivity {
                     refreshLayout.setRefreshHeader(new WaterDropHeader(baseContext));
                 }else if (position == 11){
                     refreshLayout.setRefreshHeader(new WaveSwipeHeader(baseContext));
+                }else if (position == 12){
                 }
             }
 

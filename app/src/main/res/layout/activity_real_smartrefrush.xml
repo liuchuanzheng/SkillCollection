@@ -7,6 +7,12 @@
         android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/abc"
+            />
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rcv"
             android:layout_width="match_parent"
@@ -14,6 +20,13 @@
             android:layout_below="@id/base_bar">
 
         </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:background="#444"
+            android:textColor="#fff"
+            android:text="看看我会不会变成footer"/>
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 </RelativeLayout>
